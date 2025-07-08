@@ -295,6 +295,11 @@ h3.subtitle-center {
         and the '1fr' allows them to grow and share any extra space equally.
     */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*
+        This sets the height of all automatically created grid rows to 300px.
+        This effectively makes each row 300px tall.
+    */
+    grid-auto-rows: 300px;
     gap: 15px; /* The space between the grid items */
 }
 
@@ -464,16 +469,16 @@ h3.subtitle-center {
     order: 2;
 }
 
-/* Software Page */
+/* Article */
 
-.software-name {
+.article-name {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     margin-top: 5px;
     margin-bottom: 8px;
 }
 
-.software-description {
+.article-description {
     margin-top: 0px;
     margin-bottom: 10px;
 }
@@ -664,7 +669,7 @@ h3.subtitle-center {
         order: 1;
     }
 
-    .abstract, .software-description {
+    .abstract, .article-description {
         text-align: justify;
     }
 
