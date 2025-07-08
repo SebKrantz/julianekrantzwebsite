@@ -118,10 +118,6 @@ body {
         flex-direction: column; /* Stack columns vertically */
     }
 
-    .details-column {
-        padding-top: 30px;
-    }
-
     .details-column h1 {
         font-size: 2rem;
     }
