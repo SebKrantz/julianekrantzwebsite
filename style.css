@@ -407,7 +407,7 @@ h3.subtitle-center {
     text-align: left;
 }
 
-/* Research Page */
+/* Illustration Page */
 
 .article {
     margin-bottom: 30px;
@@ -690,7 +690,9 @@ h3.subtitle-center {
 
 /* If screen is very narrow, stack the mobile images too */
 @media (max-width: 480px) {
+
     .cv-left-column-gallery {
         flex-direction: column;
     }
+    
 }
