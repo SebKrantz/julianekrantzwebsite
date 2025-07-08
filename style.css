@@ -1,0 +1,691 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Content and Footer */ 
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer {
+    /* background-color: white;*/ 
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #888;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* General styling for links and headers */
+
+a {
+    color: #007c91;
+    text-decoration: none;
+}
+
+a.textlink {
+    color: #00434f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005c6a;
+}
+
+a.textlink:hover {
+    color: #007c91;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 45px;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 5px;
+}
+
+
+ul.itemize {
+    width: 90%; /* Ensures the UL takes full width */
+}
+
+ul.itemize li {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 5px; /* Adds space for the bullet outside the text block */
+    padding-left: 5px; /* Adds space between the bullet and the text */
+}
+
+ul.itemize li::marker {
+    color: #333;
+    /* font-size: 20pt;
+        vertical-align: bottom; */ 
+}
+
+/* Navigation bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+nav {
+    background-color: #1f1f21; /* rgba(0, 0, 0, 0.87); #222; */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Not needed it seeems 
+    flex-grow: 1;
+    justify-content: flex-end;
+    */
+    /* justify-content: center; */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a, nav a:hover {
+    color: white;
+}
+
+nav ul li a {
+    padding: 20px 20px;
+    display: block; 
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background-color: #444;
+}
+
+.navbar a.name {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    /* margin-left: 20px; */
+}
+
+/* Hamburger Menu for Mobile View */ 
+/* Source: https://medium.com/creative-technology-concepts-code/responsive-mobile-dropdown-navigation-using-css-only-7218e4498a99; */
+
+.navbar .menu-icon {
+    display: none; /* Hidden by default, will be displayed on mobile */
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 24px 20px;
+    user-select: none; /*Disables text selection on the element and its children.*/ 
+    z-index: 1000; /* Ensure it's above other content */
+}
+/* This is the middle bar */
+.navbar .menu-icon .navicon {
+    background: #fff;
+    display: block;
+    width: 18px;
+    height: 2px;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+}
+/* These are the top and bottom bars */ 
+.navbar .menu-icon .navicon:before,
+.navbar .menu-icon .navicon:after {
+    content: '';
+    background: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.2s ease-out;
+}
+/* This shifts the befor and after bars */ 
+.navbar .menu-icon .navicon:before {
+    top: 5px;
+}
+.navbar .menu-icon .navicon:after {
+    top: -5px;
+}
+/* This is the checkbox. It is always hidden */ 
+#menu-toggle {
+    display: none;
+}
+
+
+
+/* Index page profile */
+
+
+/*
+  This targets the <div> with the class "image-background".
+*/
+.image-background {
+  /*
+    Set the width of the container to 90% of the width of its parent element (e.g., the page body).
+  */
+  width: 90%;
+
+  /*
+    This is a shorthand for setting top/bottom margin to 0 and left/right margin to "auto".
+    The "auto" value for horizontal margins tells the browser to automatically calculate
+    and distribute the remaining horizontal space equally, which results in centering the element.
+  */
+  margin: 0 auto;
+}
+
+/*
+  This targets the <img> element that is inside the .image-background container.
+*/
+.image-background img {
+  /*
+    Makes the image's width equal to 100% of its parent container (.image-background).
+    Since the container is 90% of the page, the image will also appear to be 90% of the page width.
+  */
+  width: 100%;
+
+  /*
+    Maintains the original aspect ratio of the image. The height will adjust automatically
+    as the width changes.
+  */
+  height: auto;
+
+  /*
+    It's good practice to set images to display: block to remove any extra space
+    that might appear below the image, as <img> is an inline element by default.
+  */
+  display: block;
+}
+
+h1.title-center {
+    font-size: 40pt;
+    text-align: center;
+}
+
+h3.subtitle-center {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+    padding-top: 13px;
+}
+
+.profile-picture img {
+    max-width: 320px;
+    height: auto;
+    /* border-radius: 50%; */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.profile-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Gallery Page */
+
+/* The main container for the gallery grid */
+.gallery-container {
+    display: grid;
+    /* 
+        This is the core of the responsive grid.
+        - repeat(): Creates multiple columns.
+        - auto-fit: Fits as many columns as possible in the available space.
+        - minmax(300px, 1fr): Each column will be a minimum of 300px wide, 
+        and the '1fr' allows them to grow and share any extra space equally.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px; /* The space between the grid items */
+}
+
+/* Each individual gallery item (the clickable link) */
+.gallery-item {
+    position: relative; /* Establishes a positioning context for the overlay */
+    display: block;
+    overflow: hidden; /* Hides parts of the image that zoom outside the container */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none; /* Removes underline from the link */
+}
+
+/* Styling for the image within the gallery item */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    /* 
+        Crucial property: Ensures the image covers the entire container 
+        without losing its aspect ratio. It will crop the image if necessary.
+    */
+    object-fit: cover;
+    display: block; /* Removes any extra space below the image */
+    transition: transform 0.4s ease-in-out; /* Smooth zoom effect on hover */
+}
+
+/* Zoom the image slightly when hovering over the item */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* The overlay container for the title and subtitle */
+.gallery-item-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px 20px; /* Extra top padding for the gradient effect */
+    color: white;
+    
+    /* The dark shading effect using a gradient */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    
+    /* Initially hidden */
+    opacity: 0;
+    
+    /* Smooth fade-in transition */
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Make the info overlay visible on hover */
+.gallery-item:hover .gallery-item-info {
+    opacity: 1;
+}
+
+/* Styling for the title text */
+.gallery-item-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transform: translateY(10px); /* Start slightly lower */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Styling for the subtitle text */
+.gallery-item-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transform: translateY(10px); /* Start slightly lower */
+    transition: transform 0.5s ease-in-out; /* Slightly slower transition */
+}
+
+/* Animate the text sliding up on hover */
+.gallery-item:hover h3,
+.gallery-item:hover p {
+    transform: translateY(0);
+}
+
+/* Social Icons */
+
+.social-icons {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #1f1f21; /* #222; */
+    margin: 0 15px;
+}
+
+.social-icons svg {
+    width: auto;
+    height: 32px;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+   color: #444;
+}
+
+#social-contact {
+    text-align: left;
+}
+
+/* Research Page */
+
+.article {
+    margin-bottom: 30px;
+}
+
+.article h3 {
+    color: #111;
+    font-size: 20px;
+    margin-bottom: 0px; /* 5px; */
+}
+
+.with-picture h3 {
+    color: #111;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px; /* 5px; */
+}
+
+.venue {
+    font-style: italic;
+    margin-bottom: 5px; /* 10px; */
+}
+
+.abstract {
+    margin-bottom: 10px;
+}
+
+.links {
+    margin-bottom: 10px;
+}
+
+.with-picture {
+    display: flex;
+    align-items: flex-start; /* row; */
+    margin-top: 50px;
+}
+
+.with-picture img, .with-picture > a {
+    order: 1;
+    height: 250px;
+    width: auto; 
+    margin-right: 20px;
+}
+
+.double-image {
+    margin-right: 20px;
+}
+
+/* linked pictures */
+.with-picture a:hover {
+    opacity: 80%;
+}
+
+.article-content {
+    flex: 1;
+}
+
+.with-picture .article-content {
+    order: 2;
+}
+
+/* Software Page */
+
+.software-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.software-description {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+.badges {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.badges img {
+    margin: 2px 0px;
+    height: 1.3em;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Vita / Contact Page */
+
+/* General Styling for the component */
+.cv-container-simple {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #333;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1250px; /* Max width as requested */
+    /* margin: 2rem auto; /* Center the component on the page */
+    /* padding: 2rem;*/ 
+    box-sizing: border-box;
+
+    /* --- Main Layout: Flexbox for columns --- */
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    gap: 3rem; /* Space between the image and text columns */
+}
+
+/* --- Left Column (40%): Image Gallery --- */
+/* This column takes 40% of the container's width (flex: 2 out of 5 total parts) */
+.cv-left-column-gallery {
+    flex: 2; /* Takes up 2 parts of the total width */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between the two images */
+    min-width: 0; /* Prevents flex item from shrinking weirdly */
+}
+
+/* Styling for the <img> tags */
+.cv-left-column-gallery img {
+    width: 100%; /* Makes the image fill the column's width */
+    height: auto; /* Maintains the image's aspect ratio */
+    display: block; /* Removes bottom margin/space */
+    border-radius: 4px;
+    background-color: #f0f2f5; /* Fallback color while image loads */
+}
+
+/* --- Right Column (60%): Text Content --- */
+/* This column takes 60% of the container's width (flex: 3 out of 5 total parts) */
+.cv-right-column-content {
+    flex: 3; /* Takes up 3 parts of the total width */
+    min-width: 0; /* Prevents flex item from overflowing */
+}
+
+/* Typography and Section Styling */
+.cv-section h2 {
+    font-size: 1.6rem;
+    color: #2d3748;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.cv-section h2::after {
+    display: none;
+}
+
+.cv-section {
+    margin-bottom: 2.5rem;
+}
+
+.cv-section:last-child {
+    margin-bottom: 0;
+}
+
+.cv-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 1.5rem;
+}
+
+.cv-list dt {
+    font-weight: 600;
+    color: #4a5568;
+    padding-top: 0.1rem;
+    text-align: right;
+}
+
+.cv-list dd {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Mobile firendliness */
+
+@media screen and (max-width: 1100px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        padding: 0px;
+        height: 50px;
+    }
+    .name {
+        padding: 0px 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0, 0.7);
+        width: 100%;
+        /* This is just needed for dropdown to be above the other content */ 
+        position: absolute;
+        top: 50px;
+        z-index: 1000; /* Ensure it's always above highlighted pictures */
+        /* This is for the dropdown animation */ 
+        visibility: hidden;
+        max-height: 0px; /* initially zero height to have transition */
+        overflow: hidden; /* Hide overflow to prevent content (li) from spilling out */
+        transition: visibility 0s, max-height 0.2s ease-out;
+    }
+    nav ul li a:hover, nav ul li a.active {
+        background-color: rgba(255, 255, 255, 0.35);
+    }
+
+    /* Show the menu icon on mobile */
+    .navbar .menu-icon {
+        display: inline-block; 
+    }
+    /*Now the action when it is clicked */
+    #menu-toggle:checked ~ ul {
+        visibility: visible;
+        max-height: 600px;
+    }
+    #menu-toggle:checked ~ .menu-icon .navicon {
+        background-color: transparent;
+    }
+    #menu-toggle:checked ~ .menu-icon .navicon:before {
+        transform: translateY(-5px) rotate(-45deg);
+    }
+    #menu-toggle:checked ~ .menu-icon .navicon:after {
+        transform: translateY(5px) rotate(45deg);
+    }
+    
+}
+
+/* Handy */
+@media screen and (max-width: 850px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .profile-picture {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .profile-info {
+        text-align: center;
+    }
+
+
+    .with-picture {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .with-picture .double-image, .with-picture > a {
+        order: 2;
+        width: 100% !important;
+        margin-top: 5px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .with-picture .article-content {
+        order: 1;
+    }
+
+    .abstract, .software-description {
+        text-align: justify;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
+
+    .cv-container-simple {
+        flex-direction: column; /* Stack columns vertically */
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .cv-left-column-gallery {
+        flex-direction: row; /* Place images side-by-side on mobile */
+    }
+}
+
+/* If screen is very narrow, stack the mobile images too */
+@media (max-width: 480px) {
+    .cv-left-column-gallery {
+        flex-direction: column;
+    }
+}
