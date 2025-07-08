@@ -585,6 +585,17 @@ h3.subtitle-center {
     line-height: 1.6;
 }
 
+/* Au Fin */
+
+.centered-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Full viewport height */
+    text-align: center;
+}
+
 /* Mobile firendliness */
 
 @media screen and (max-width: 1150px) {
