@@ -518,6 +518,7 @@ h3.subtitle-center {
 /* --- Left Column (40%): Image Gallery --- */
 /* This column takes 40% of the container's width (flex: 2 out of 5 total parts) */
 .cv-left-column-gallery {
+    order: 1; /* Ensures this column is first */
     flex: 2; /* Takes up 2 parts of the total width */
     display: flex;
     flex-direction: column;
@@ -531,12 +532,14 @@ h3.subtitle-center {
     height: auto; /* Maintains the image's aspect ratio */
     display: block; /* Removes bottom margin/space */
     border-radius: 4px;
+    margin-top: 45px; /* Adds some top padding for spacing */
     background-color: #f0f2f5; /* Fallback color while image loads */
 }
 
 /* --- Right Column (60%): Text Content --- */
 /* This column takes 60% of the container's width (flex: 3 out of 5 total parts) */
 .cv-right-column-content {
+    order: 2; /* Ensures this column is second */
     flex: 3; /* Takes up 3 parts of the total width */
     min-width: 0; /* Prevents flex item from overflowing */
 }
@@ -662,7 +665,7 @@ h3.subtitle-center {
         /* align-items: center; */
     }
 
-    .with-picture .double-image, .with-picture > a {
+    .with-picture img, .with-picture .double-image, .with-picture > a {
         order: 2;
         width: 100% !important;
         margin-top: 5px;
@@ -688,8 +691,18 @@ h3.subtitle-center {
         gap: 2rem;
     }
 
+    .cv-right-column-content {
+        order: 1; /* Ensure this column is first on mobile */
+        margin-top: 0; /* Reset margin for better spacing */
+    }
+
     .cv-left-column-gallery {
+        order: 2; /* Ensure this column is second on mobile */
         flex-direction: row; /* Place images side-by-side on mobile */
+    }
+
+    .cv-left-column-gallery img {
+        margin-top: 0; /* Remove top margin for better spacing */
     }
 }
 
