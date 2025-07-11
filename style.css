@@ -145,6 +145,70 @@ nav ul li a:hover, nav ul li a.active {
     /* margin-left: 20px; */
 }
 
+/* This is the dropdown menu for the gallery */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown > a {
+    cursor: pointer;
+}
+
+nav ul li.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #1f1f21;
+    min-width: 180px;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    padding: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+nav ul li.dropdown .dropdown-content li {
+    display: block;
+}
+
+nav ul li.dropdown .dropdown-content li a {
+    color: white;
+    padding: 12px 20px;
+    display: block;
+    background: none;
+    font-size: 16px;
+}
+
+nav ul li.dropdown .dropdown-content li a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+nav ul li.dropdown:hover > .dropdown-content,
+nav ul li.dropdown:focus-within > .dropdown-content {
+    display: block;
+}
+
+/* On mobile, show dropdown as part of the vertical menu
+@media screen and (max-width: 900px) {
+    nav ul li.dropdown .dropdown-content {
+        position: static !important;
+        box-shadow: none !important;
+        background-color: rgba(0,0,0,0.7) !important;
+        min-width: 0 !important;
+        border-radius: 0 !important;
+        display: none;
+    }
+    nav ul li.dropdown .dropdown-content li a {
+        padding-left: 40px;
+    }
+    nav ul li.dropdown:hover > .dropdown-content,
+    nav ul li.dropdown:focus-within > .dropdown-content,
+    #menu-toggle:checked ~ ul li.dropdown .dropdown-content {
+        display: block !important;
+    }
+} */
+
 /* Hamburger Menu for Mobile View */ 
 /* Source: https://medium.com/creative-technology-concepts-code/responsive-mobile-dropdown-navigation-using-css-only-7218e4498a99; */
 
