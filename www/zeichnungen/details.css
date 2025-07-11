@@ -80,8 +80,7 @@ body {
 }
 
 .details-column .subtitle {
-    font-size: 1.2rem;
-    font-style: italic;
+    font-size: 1.4rem;
     color: #a0a0a0; /* Lighter gray for subtitle */
     margin: 0 0 25px 0;
 }
