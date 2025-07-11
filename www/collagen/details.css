@@ -1,0 +1,124 @@
+
+/* Basic page styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: rgb(35, 35, 35); /* Dark background */
+    color: #e0e0e0; /* Light default text color */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* A container to center the content and provide padding */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+/* Header section for the back link */
+.page-header {
+    margin-bottom: 30px;
+}
+
+.back-to-gallery {
+    display: inline-block;
+    color: #dddddd;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-to-gallery:hover {
+    background-color: #f0f2f5;
+    color: rgb(35, 35, 35);
+}
+
+
+/* Main container for the two-column layout */
+.product-container {
+    display: flex;
+    gap: 40px; /* Space between the image and the details */
+}
+
+/* Left column: Image */
+.image-column {
+    flex: 1 1 65%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center the image and copyright text */
+}
+
+.image-column img {
+    max-width: 100%; 
+    height: auto;
+    max-height: 90vh; /* Limit height to viewport height */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Style for the new copyright text */
+.copyright {
+    margin-top: 20px; /* Space between image and text */
+    color: #888;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+/* Right column: Text details */
+.details-column {
+    flex: 1 1 35%;
+}
+
+.details-column h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #ffffff; /* White for main title */
+}
+
+.details-column .subtitle {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #a0a0a0; /* Lighter gray for subtitle */
+    margin: 0 0 25px 0;
+}
+
+.details-column .description {
+    font-size: 1rem;
+    color: #c0c0c0; /* Light gray for description */
+}
+
+/* Purchase information is now part of the details column */
+.purchase-info {
+    margin-top: 40px;
+}
+
+.purchase-info .price {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #ffffff; /* White for price */
+    margin-bottom: 10px;
+}
+
+.purchase-info .contact-note {
+    font-size: 0.9rem;
+    color: #a0a0a0; /* Lighter gray for note */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 20px;
+    }
+
+    .product-container {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .details-column h1 {
+        font-size: 2rem;
+    }
+}
