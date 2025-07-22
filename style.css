@@ -767,7 +767,7 @@ h3.subtitle-center {
 
     .cv-container-simple {
         flex-direction: column; /* Stack columns vertically */
-        padding: 1.5rem;
+        padding: 0.3rem; /* Add some padding for mobile */
         gap: 2rem;
     }
 
